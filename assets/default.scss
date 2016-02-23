@@ -1,0 +1,114 @@
+@import "reset";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+$headingFont: "Akkurat";
+
+header.main-header {
+
+  $headerHeight: 100px;
+  $sidePadding: 40px;
+  $navPadding: 20px;
+
+  width: 100vw;
+  height: $headerHeight;
+
+  border-bottom: 1px solid #eeeeee;
+
+  position: relative;
+
+  h1 {
+	font-family: $headingFont;
+	font-weight: 300;
+	font-size: 2.3rem;
+	line-height: $headerHeight;
+
+	margin-left: $sidePadding;
+  }
+
+  nav {
+	position: absolute;
+	top: 0;
+	right: $sidePadding;
+
+	li {
+	  display: inline-block;
+	  font-family: Akkurat;
+	  font-weight: 300;
+	  font-size: 1.1rem;
+	  line-height: $headerHeight;
+
+	  padding-right: $navPadding;
+
+	  &:last-child {
+		padding-right: 0;
+	  }
+	}
+  }
+}
+
+main {
+
+  $gutterWidth: 30px;
+  $paddingWidth: 10px;
+
+  $cardHeight: 240px;
+
+  width: 1200px;
+  margin: $gutterWidth auto;
+
+  header {
+
+	margin-bottom: $gutterWidth;
+
+	h1 {
+	  font-family: $headingFont;
+	  font-weight: 300;
+	  font-size: 1.5rem;
+	}
+  }
+
+  .row {
+	width: 100%;
+
+	.card {
+
+	  float: left;
+
+	  padding-right: $gutterWidth;
+	  padding-bottom: $gutterWidth;
+
+	  &.right {
+		padding-right: 0;
+	  }
+
+	  h1 {
+		font: 300 2rem $headingFont;
+	  }
+
+	  h2 {
+		font: 300 1.4rem $headingFont;
+	  }
+
+	  .inner {
+		height: 100%;
+		padding: $paddingWidth;
+		background-color: #454545;
+
+		vertical-align: bottom;
+	  }
+
+	  &.single {
+		width: 33.33%;
+		height: $cardHeight;
+	  }
+	  &.double {
+		width: 66.66%;
+		height: ($cardHeight*2);
+	  }
+	}
+  }
+}
