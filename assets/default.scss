@@ -50,9 +50,10 @@ header.main-header {
   }
 }
 
+$gutterWidth: 30px;
+
 main {
 
-  $gutterWidth: 30px;
   $paddingWidth: 10px;
 
   $cardHeight: 240px;
@@ -74,16 +75,17 @@ main {
   .row {
 	width: 100%;
 
+	.col-2-3 .card {
+	  height: $cardHeight*2;
+	}
+
+	.col-1-3 .card {
+	  height: $cardHeight;
+	}
+
 	.card {
 
-	  float: left;
-
-	  padding-right: $gutterWidth;
 	  padding-bottom: $gutterWidth;
-
-	  &.right {
-		padding-right: 0;
-	  }
 
 	  h1 {
 		font: 300 2rem $headingFont;
@@ -100,22 +102,13 @@ main {
 
 		vertical-align: bottom;
 	  }
-
-	  &.single {
-		width: 33.33%;
-		height: $cardHeight;
-	  }
-	  &.double {
-		width: 66.66%;
-		height: ($cardHeight*2);
-	  }
 	}
   }
 }
 
 [class*='col-'] {
   float: left;
-  padding-right: 40px;
+  padding-right: $gutterWidth;
 
   &:last-child {
 	padding-right: 0;
@@ -124,7 +117,9 @@ main {
 
 .col-1-3 {
   width: 33.33%;
-
+}
+.col-2-3 {
+  width: 66.66%;
 }
 
 footer {
@@ -138,4 +133,10 @@ footer {
 	display: block;
   }
 
+}
+
+.card .ball {
+  background: linear-gradient(rgba(0,191,234,0.65), rgba(0,191,234,0.65)), url("assets/ball.jpg")  !important;
+  background-position: center center;
+  background-size: cover;
 }
