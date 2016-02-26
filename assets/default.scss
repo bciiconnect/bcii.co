@@ -61,6 +61,8 @@ main {
   width: 1200px;
   margin: $gutterWidth auto;
 
+  overflow: hidden;
+
   header {
 
 	margin-bottom: $gutterWidth;
@@ -125,9 +127,11 @@ main {
 footer {
   width: 1200px;
 
-  margin: 40px auto;
+  margin: $gutterWidth auto;
 
   overflow: hidden;
+
+  font-family: $headingFont;
 
   .nav a {
 	display: block;
