@@ -54,7 +54,7 @@ $gutterWidth: 30px;
 
 main {
 
-  $paddingWidth: 10px;
+  $paddingWidth: 15px;
 
   $cardHeight: 240px;
 
@@ -101,8 +101,14 @@ main {
 		height: 100%;
 		padding: $paddingWidth;
 		background-color: #454545;
+		position: relative;
 
-		vertical-align: bottom;
+		.details {
+		  color: white;
+
+		  position: absolute;
+		  bottom: $paddingWidth;
+		}
 	  }
 	}
   }
