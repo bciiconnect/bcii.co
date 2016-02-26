@@ -1,4 +1,5 @@
 @import "reset";
+@import "bg-colours";
 
 * {
   margin: 0;
@@ -87,6 +88,8 @@ main {
 
 	.card {
 
+	  position: relative;
+
 	  padding-bottom: $gutterWidth;
 
 	  h1 {
@@ -94,21 +97,21 @@ main {
 	  }
 
 	  h2 {
-		font: 300 1.4rem $headingFont;
+		font: 300 1.3rem $headingFont;
 	  }
 
 	  .inner {
 		height: 100%;
-		padding: $paddingWidth;
-		background-color: #454545;
 		position: relative;
+	  }
 
-		.details {
-		  color: white;
+	  .details {
+		color: white;
 
-		  position: absolute;
-		  bottom: $paddingWidth;
-		}
+		padding: $paddingWidth;
+
+		position: absolute;
+		bottom: $gutterWidth;
 	  }
 	}
   }
@@ -146,7 +149,7 @@ footer {
 }
 
 .card .ball {
-  background: linear-gradient(rgba(0,191,234,0.65), rgba(0,191,234,0.65)), url("assets/ball.jpg")  !important;
+  background-image: url("assets/ball.jpg");
   background-position: center center;
   background-size: cover;
 }
