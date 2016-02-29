@@ -15,9 +15,12 @@
             <a href="contact.php">contact</a>
         </nav>
     </div>
-    <main>
-        <div class="header bg-orange">
-            <h1>ote bag swag twee kogi, next level tofu selvage beard truffaut yr franzen meggings stumptown bitters.</h1>
+    <main class="half-padding">
+        <div class="col-3-3">
+            <div class="card header bg-orange">
+                <h1>ote bag swag twee kogi, next level tofu selvage beard truffaut yr franzen meggings stumptown bitters.</h1>
+            </div>
+
         </div>
         <div class="row">
             <div class="col-1-3">

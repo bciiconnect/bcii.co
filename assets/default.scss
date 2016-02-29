@@ -101,8 +101,6 @@ main {
 
 	  position: relative;
 
-	  padding-bottom: $gutterWidth;
-
 	  h1 {
 		font: 300 2rem $headingFont;
 	  }
@@ -137,7 +135,7 @@ main p {
 
 [class*='col-'] {
   float: left;
-  padding-right: $gutterWidth;
+  padding: $gutterWidth / 2;
 
   &:last-child {
 	padding-right: 0;
@@ -150,6 +148,8 @@ main p {
 .col-2-3 {
   width: 66.66%;
 }
+
+.col-3-3
 
 footer {
   width: 1200px;
