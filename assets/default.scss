@@ -10,9 +10,15 @@ $headingFont: "Akkurat";
 
 header.main-header {
 
-  $headerHeight: 100px;
-  $sidePadding: 40px;
+  $headerHeight: 120px;
+  $sidePadding: 0px;
   $navPadding: 20px;
+
+  .inner {
+	margin: 0 auto;
+	width: 1200px;
+	position: relative;
+  }
 
   width: 100vw;
   height: $headerHeight;
@@ -20,6 +26,11 @@ header.main-header {
   border-bottom: 1px solid #eeeeee;
 
   position: relative;
+
+  a {
+	text-decoration: none;
+	color: black;
+  }
 
   h1 {
 	font-family: $headingFont;
@@ -35,7 +46,7 @@ header.main-header {
 	top: 0;
 	right: $sidePadding;
 
-	li {
+	a {
 	  display: inline-block;
 	  font-family: Akkurat;
 	  font-weight: 300;
@@ -100,9 +111,12 @@ main {
 		font: 300 1.3rem $headingFont;
 	  }
 
-	  .inner {
+	  .card-bg {
 		height: 100%;
 		position: relative;
+
+		background-position: center;
+		background-size: cover;
 	  }
 
 	  .details {

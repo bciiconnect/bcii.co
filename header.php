@@ -8,11 +8,13 @@
 </head>
 <body>
 <header class="main-header">
-    <h1>BCII Connect</h1>
-    <nav>
-        <li>about</li>
-        <li>team</li>
-        <li>blog</li>
-        <li>contact</li>
-    </nav>
+    <div class="inner">
+        <a href="/"><h1>BCII Connect</h1></a>
+        <nav>
+            <a href="about.php">about</a>
+            <a href="events.php">events</a>
+            <a href="team.php">team</a>
+            <a href="contact.php">contact</a>
+        </nav>
+    </div>
 </header>
