@@ -117,6 +117,10 @@ main {
   }
 }
 
+main p {
+  font:300 16px Akkurat;
+}
+
 [class*='col-'] {
   float: left;
   padding-right: $gutterWidth;
