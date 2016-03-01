@@ -111,7 +111,21 @@ main {
 	  color: white;
 
 	  position: absolute;
-	  bottom: $gutterWidth;
+	  top: 0;
+	  left: 0;
+
+	  width: 100%;
+	  height: 100%;
+
+	  padding-bottom: $gutterWidth;
+
+	  display: table;
+
+	  h1 {
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	  }
 	}
   }
 
