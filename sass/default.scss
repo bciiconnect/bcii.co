@@ -85,6 +85,8 @@ main {
 
   .card {
 
+	width: 100%;
+
 	height: 40vh;
 
 	position: relative;
@@ -97,6 +99,10 @@ main {
 
 	h2 {
 	  font: 300 1.3rem $headingFont;
+	}
+
+	p {
+	  font: 300 1.1rem $headingFont;
 	}
 
 	.card-bg {

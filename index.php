@@ -4,17 +4,7 @@
     <link rel="stylesheet" href="default.css" />
 </head>
 <body>
-    <div class="sidebar">
-        <img src="logo.png" alt="BCII Connect Logo" />
-        
-        <nav>
-            <a href="about.php">about</a>
-            <a href="events.php">events</a>
-            <a href="team.php">team</a>
-            <a href="sponsors.php">sponsors</a>
-            <a href="contact.php">contact</a>
-        </nav>
-    </div>
+    <?php include("sidebar.php"); ?>
     <main class="half-padding">
         <div class="col-3-3">
             <div class="card header bg-orange">
