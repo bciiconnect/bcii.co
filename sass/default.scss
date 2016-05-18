@@ -43,6 +43,11 @@ $headingFont: "Akkurat";
   padding: 25vh 2vw $gutterWidth;
 
   background: #faf5f0;
+
+  img {
+	width: 100%;
+	margin-bottom: $gutterWidth/2;
+  }
   
   nav a {
 	display: list-item;
@@ -54,6 +59,7 @@ $headingFont: "Akkurat";
 	font-family: $headingFont;
 	font-size: 1.4rem;
 	line-height: 1.6rem;
+	font-weight: 300;
   }
 }
 
@@ -103,6 +109,7 @@ main {
 
 	p {
 	  font: 300 1.1rem $headingFont;
+	  margin-bottom: $gutterWidth;
 	}
 
 	.card-bg {

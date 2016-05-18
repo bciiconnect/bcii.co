@@ -1,3 +1,7 @@
 sculpin_content_types:
+  sass:
+    singular_name: sass
+    path: sass
+    enabled: false
   posts:
     enabled: false
