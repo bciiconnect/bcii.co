@@ -15,7 +15,7 @@ html {
   box-sizing: inherit;
 }
 
-$sidebarWidth: 25%;
+$sidebarWidth: 20%;
 $gutterWidth: 25px;
 
 $headingFont: "Akkurat";
@@ -53,7 +53,7 @@ $headingFont: "Akkurat";
 
   padding: 25vh 2vw $gutterWidth;
 
-  background: #faf5f0;
+  //background: #faf5f0;
 
   img {
     width: 100%;
