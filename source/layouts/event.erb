@@ -1,0 +1,28 @@
+<% wrap_layout :layout do %>
+    <main class="half-padding">
+      <div class="col-3-3">
+        <div class="card header">
+          <% if defined? current_page.data.image %>
+            <div class="card-bg bg-green" style="background-image: url('<%= current_page.url %>images/<%= current_page.data.image %>')"></div>
+          <% end %>
+          <div class="details">
+            <h1><%= current_page.data.title %></h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2-3">
+          <div class="card no-min-height">
+            <%= yield %>
+          </div>
+        </div>
+      </div>
+      <div class="images row">
+        <% photos = Dir.glob("source#{current_page.url}images/*") %>
+        <% photos.each do |photo| %>
+            <% name = photo.split("/").last %>
+            <img src="<%= current_page.url %>images/<%= name %>" class="col-1-3"/>
+        <% end %>
+      </div>
+    </main>
+<% end %>
