@@ -1,67 +1,179 @@
 @charset "utf-8";
 @import "normalize";
 
-body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
-}
-
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
-}
-
-h1 {
-  color: rgba(0,0,0,0.5);
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.8em;
-  font-weight: 400;
+* {
   margin: 0;
+  padding: 0;
 }
 
-.doc {
-  margin: 3em 0;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1.1em;
-  font-weight: 300;
 
-  a {
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 0.75em 0.7em;
-    color: white;
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+$sidebarWidth: 25%;
+$gutterWidth: 25px;
+
+$headingFont: "Akkurat";
+
+
+[class*='col-'] {
+  float: left;
+  padding: $gutterWidth/2;
+}
+
+.col-1-3 {
+  width: 33.33%;
+}
+.col-2-3 {
+  width: 66.66%;
+}
+
+.col-3-3 {
+  width:100%;
+}
+
+.row {
+  width: 100%;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: $sidebarWidth;
+
+  padding: 25vh 2vw $gutterWidth;
+
+  background: #faf5f0;
+
+  img {
+    width: 100%;
+    margin-bottom: $gutterWidth/2;
+  }
+
+  nav a {
+    display: list-item;
     text-decoration: none;
-    transition: color 0.1s linear;
-    &:hover {
-      background: rgba(0,0,0,0.2);
-      color: white;
-      transition: all 0.15s linear;
+    list-style-type: none;
+
+    color: black;
+
+    font-family: $headingFont;
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+  }
+}
+
+main {
+  position: absolute;
+  top: 0;
+  left: $sidebarWidth;
+  right: 0;
+
+  padding: 5vh 4vw;
+
+  .header {
+    height: 40vh;
+
+    padding: 2vw;
+
+    display: table;
+
+    text-align: center;
+
+    h1 {
+      display: table-cell;
+      vertical-align: middle;
+
+      font-family: $headingFont;
+      font-weight: 300;
     }
   }
+
+  .card {
+
+    width: 100%;
+
+    height: 40vh;
+
+    position: relative;
+
+    padding-bottom: $gutterWidth;
+
+    h1 {
+      font: 300 2rem $headingFont;
+    }
+
+    h2 {
+      font: 300 1.3rem $headingFont;
+    }
+
+    p {
+      font: 300 1.1rem $headingFont;
+      margin-bottom: $gutterWidth;
+    }
+
+    .card-bg {
+      height: 100%;
+      position: relative;
+
+      background-position: center;
+      background-size: cover;
+    }
+
+    .details {
+      color: white;
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      padding-bottom: $gutterWidth;
+
+      display: table;
+
+      h1 {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+      }
+    }
+  }
+
 }
 
-.welcome {
-  -webkit-animation-name: welcome;
-  -webkit-animation-duration: .9s;
+[class*='bg-']::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top:0;
+  left:0;
 }
 
-@-webkit-keyframes welcome {
-  from {
-    -webkit-transform: scale(0);
-    opacity: 0;
-  }
-  50% {
-   -webkit-transform: scale(0);
-   opacity: 0;
-  }
-  82.5% {
-    -webkit-transform: scale(1.03);
-    -webkit-animation-timing-function: ease-out;
-    opacity: 1;
-  }
-  to {
-    -webkit-transform: scale(1);
-  }
+.bg-blue::after {
+  background-color: rgba(0,191,234,0.65);
+}
+
+.bg-green::after {
+  background-color: rgba(0, 207, 125,0.75);
+}
+
+.bg-dark-blue::after {
+  background-color: rgba(0, 52, 71, 0.65);
+}
+
+.bg-orange {
+  background: #faae1f;
 }
