@@ -29,6 +29,10 @@ activate :directory_indexes
 set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fenced_code_blocks => true
 set :markdown_engine, :redcarpet
 
+data.shortlinks.each do |short, link|
+  proxy "/#{short}", "/shortlink.html", :locals => { :shortlink => link}
+end
+
 ###
 # Helpers
 ###
