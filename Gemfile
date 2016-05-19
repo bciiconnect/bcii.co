@@ -13,3 +13,5 @@ gem 'middleman', '>= 4.0.0'
 gem 'middleman-livereload'
 
 gem 'redcarpet'
+
+gem 'middleman-gh-pages'
