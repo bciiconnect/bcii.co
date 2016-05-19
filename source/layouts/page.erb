@@ -11,7 +11,7 @@
       </header>
       <article>
         <div class="row">
-          <div class="<%= defined?(current_page.data.image) ? 'col-2-3' : 'col-3-3' %>">
+          <div class="col-2-3 <%= defined?(current_page.data.image) ? '' : 'middle' %> ">
             <%= yield %>
           </div>
           <% if defined? current_page.data.image %>
