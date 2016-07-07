@@ -15,219 +15,81 @@ html {
   box-sizing: inherit;
 }
 
-$sidebarWidth: 20%;
-$gutterWidth: 25px;
-
-$maxWidth: 1100px;
-
-$headingFont: "Akkurat";
-
-
-[class*='col-'] {
-  float: left;
-  padding: $gutterWidth/2;
-
-  &.middle {
-    float: none;
-    margin: auto;
-  }
-}
-
-.col-1-3 {
-  width: 33.33%;
-}
-.col-2-3 {
-  width: 66.66%;
-}
-
-.col-3-3 {
-  width:100%;
-}
-
-.row {
-  width: 100%;
-  clear: both;
-  overflow: hidden;
-}
-
-$headerInner: 70px;
-
-header.site-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-
-  width: 100vw;
-
-  .inner {
-    overflow: hidden;
-
-    width: 100%;
-    max-width: $maxWidth;
+.logo {
+    width: 60%;
 
     margin: 0 auto;
+    margin-top: 18vh;
 
-    padding: $gutterWidth $gutterWidth*2 $gutterWidth*1.5;
-  }
-
-  z-index: 100;
-
-  background: white;
-
-
-
-  border-bottom: 1px solid #eeeeee;
-
-  overflow: hidden;
-
-  img {
-    float: left;
-    height: $headerInner;
-  }
-
-  nav {
-    float: right;
-
-    display: table;
-
-    height: $headerInner;
-
-    a {
-      display: table-cell;
-      text-decoration: none;
-
-      vertical-align: bottom;
-
-      color: black;
-
-      font-family: $headingFont;
-      font-size: 1.2rem;
-      line-height: 1.6rem;
-      font-weight: 300;
-
-      padding-right: $gutterWidth/2;
-
-      &:last-child {
-        padding-right: 0;
-      }
-    }
-  }
+    display: block;
 }
 
-main {
-
-  position: relative;
-  top: $headerInner + $gutterWidth * 2.5;
-
-  width: 100vw;
-
-  article {
-    padding: $gutterWidth $gutterWidth*1.5 $gutterWidth*2;
-    max-width: $maxWidth;
-    margin: 0 auto;
-  }
-
-  header {
-    width: 100vw;
-    height: 40vh;
-
-    .details {
-      padding: 0 $gutterWidth*1.5;
+@media (max-width: 700px) {
+    .logo {
+        width: 70%;
     }
+}
 
-    display: table;
+@media (max-width: 400px) {
+    .logo {
+        width: 90%;
+    }
+}
+
+.social {
+
+    margin: 10vh auto 0;
 
     text-align: center;
 
-    background-position: center;
-    background-size: cover;
+    li {
+        display: inline-block;
+        margin-right: 5px;
 
-    h1 {
-      display: table-cell;
-      vertical-align: middle;
-
-      font-family: $headingFont;
-      font-weight: 300;
-    }
-  }
-
-  h1 {
-    font: 300 2rem $headingFont;
-  }
-
-  h2 {
-    font: 300 1.3rem $headingFont;
-  }
-
-  p {
-    font: 300 1.1rem $headingFont;
-    margin-bottom: $gutterWidth;
-  }
-
-  .card {
-
-    width: 100%;
-
-    height: 40vh;
-
-    &.no-min-height {
-      height: auto;
+        &:last-child {
+            margin: 0;
+        }
     }
 
-    position: relative;
-
-    .details {
-      color: white;
-
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 100%;
-      height: 100%;
-
-      display: table;
-
-      h1 {
-        display: table-cell;
-        vertical-align: middle;
-        text-align: center;
-      }
+    img {
+        width: 50px;
+        height: 50px;
     }
-  }
-
-  .card-bg {
-    height: 100%;
-    width: 100%;
-    position: relative;
-
-    background-position: center;
-    background-size: cover;
-  }
-
 }
 
-[class*='bg-']::after {
-  content: "";
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top:0;
-  left:0;
+.activate {
+    width: 180px;
+    margin: 5vh auto;
+
+    display: block;
 }
 
-.bg-blue::after {
-  background-color: rgba(0,191,234,0.65);
-}
+.snapcode {
 
-.bg-green::after {
-  background-color: rgba(0, 207, 125,0.5);
-}
+    position: fixed;
+    top: 0;
+    left: 0;
 
-.bg-dark-blue::after {
-  background-color: rgba(0, 52, 71, 0.65);
-}
+    width: 100vw;
+    height: 100vh;
 
-.bg-orange {
-  background: #faae1f;
+    display: table-cell;
+
+    text-align: center;
+
+    vertical-align: middle;
+
+    img {
+
+        margin-top: 15vh;
+
+        height: 70vh;
+        width: 70vw;
+
+        max-width: 650px;
+    }
+
+    &.hidden {
+        display: none;
+    }
 }
