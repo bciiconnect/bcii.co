@@ -36,6 +36,12 @@ html {
     }
 }
 
+@media (max-height: 400px) {
+    .logo {
+        margin-top: 13vh;
+    }
+}
+
 .social {
 
     margin: 10vh auto 0;
