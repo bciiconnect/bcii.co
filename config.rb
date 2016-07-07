@@ -30,7 +30,7 @@ set :markdown, :tables => true, :autolink => true, :gh_blockcode => true, :fence
 set :markdown_engine, :redcarpet
 
 data.shortlinks.each do |short, link|
-  proxy "/#{short}", "/shortlink.html", :locals => { :shortlink => link}, :ignore => true
+  proxy "/#{short}/index.html", "/shortlink.html", :locals => { :shortlink => link}, :ignore => true
 end
 
 ###
